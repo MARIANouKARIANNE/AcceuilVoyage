@@ -43,6 +43,11 @@ nav{
      padding-top: 9px;
  }
 
+ h1 {
+    font-weight: 700;
+    font-size: 22px;
+ }
+
 
 .main-container {
     width: 100%;
@@ -51,10 +56,48 @@ nav{
     box-sizing: border-box;
 }
 
-h1 {
-    width: 1340px;
-    height: 26px;
+.BarreRecherche input {
+     width : 377px;
+     height: 49px;
+    border-radius: 15px ;
+    border: 1px #F2F2F2 solid ;
+    
 }
+.BarreRecherche .IconLocalisation {
+    position :relative ;
+    background-color: #F2F2F2;
+    border-left: 1px #F2F2F2 solid;
+    bottom : 53.50px;
+    left : 2px ;
+    width: 50px;
+    height: 53px;
+    border-radius: 15px 0px 0px 15px ;
+    z-index: 1;
+}
+.BarreRecherche .IconLocalisation .fa-solid {
+    width: 14px;
+    height: 18px;
+    color: black ;
+    position : relative ;
+    left : 50% ;
+    top : 50% ;
+    transform:translate(-50%, -50%) ;
+}
+.cta{
+    color : white ;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #0065FC;
+    border: 1px #0065FC solid;
+    border-radius: 0px 15px 15px 0px;
+    padding: 14px 16px 15px 16px;
+    position: relative;
+    bottom : 91px;
+    left : 250px ;
+    z-index: 2;
+}
+   
+
 
 a {
     color: inherit;
@@ -193,5 +236,11 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    .LienBleu {
+        border-bottom: 1px #0065FC solid ; 
+        padding-top: 9px;
+    }
+    
     /* ... */
 }
+
