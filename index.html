@@ -30,8 +30,8 @@
 
                 </a>
               <div class="liens">
-                  <a href="" class="LienBleu">Hébergements</a>
-                  <a href="" class="LienGris">Activités</a>
+                  <a href="#idhébergement" class="LienBleu">Hébergements</a>
+                  <a href="#idactivités" class="LienGris">Activités</a>
               </div>
             </nav>
         </header>
@@ -40,26 +40,31 @@
             <p>En plein centre-ville ou en pleine nature</p>
             <div class = "container"> 
                 <div class ="BarreRecherche">
-                    <input type = "text" name ="recherche" id="recherche">
+                    <input type = "text" placeholder="" id="recherche">
                     <div class ="IconLocalisation">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                       <a href="" class="cta">Rechercher</a> 
+                    
+                    <div class="Loupe">
+                      <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>  
                 </div>
             </div>
-            
+            <div class="TitreContainerUn">
+            <h2>Filtres</h2>
+        </div>
             <div class = "ContainerUn">
-                <h2>Filtres</h2>
                 <div class = "Filtre FiltreEconomie"> <i class="fa-solid fa-money-bill-wave"></i> économique </div>
                 <div class = "Filtre FiltreFamilial"><i class="fa-solid fa-person"></i> Familial</div>
                 <div class = "Filtre FiltreRomantique"><i class="fa-solid fa-heart"></i> Romantique</div>
                 <div class = "Filtre FiltreNosPepites"><i class="fa-solid fa-fire"></i> Nos pépites</div>
             </div>
-            <p> <i class="fa-solid fa-circle-info"></i> plus de 500 logements sont disponible dans cette ville</p>
+            <p> <i class="fa-solid fa-info"></i> plus de 500 logements sont disponible dans cette ville </p>
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
                     <div class="hebergements-title">
-                        <h2 class = "section-title"> Hébergement à Marseille </h2>
+                        <h2 class = "section-title" id="idhébergement"> Hébergement à Marseille </h2>
                     </div>
                     <div class="hebergement-cards">
                         <a href="#">
@@ -255,7 +260,7 @@
                 </section>
             </div>
             <section class="Activités">
-                <h2> Activités à Marseille </h2>
+                <h2 id="idactivités"> Activités à Marseille </h2>
                 <div class ="Activités-cards">
                 <a href="#">
                     <article class="card">
@@ -299,9 +304,34 @@
                 </a>
             </div>
             </section>
-            </div>
         </main>
-        <footer></footer>
+            <footer>
+             <div class ="container-footer">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>A propos</h4>
+                        <ul>
+                            <li><a href ="#">Fonctionnement du site</a></li>
+                            <li><a href ="#">Conditions générales</a></li>
+                            <li><a href ="#"></a>Donnés et confidentialité</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Nos Hébergements</h4>
+                        <ul>
+                            <li><a href ="#">Charte de qualité </a></li>
+                            <li><a href ="#">Proposer votre hotel </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Assistance</h4>
+                        <ul>
+                            <li><a href ="#">Centre d'aide</a></li>
+                            <li><a href ="#">Nous Contacter</a></li>
+                        </ul>
+                    </div>
+                </div>
+         </div>
     </div>
 </body>
 
