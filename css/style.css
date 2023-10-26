@@ -12,12 +12,6 @@
     color: var(--main-color);
 }
 
-body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 nav{
     display:flex;
     flex-wrap: wrap;
@@ -28,6 +22,7 @@ nav{
 }
 header {
     margin-bottom:35px;
+    height: 79px;
 }
 .logoSite {
     padding : 30px 50px  30px  0px;
@@ -38,19 +33,24 @@ header {
  
 }
 .liens {
-    width: 344px;
+    width: 300px;
     height: 35px;
     margin-bottom: 44px;
+  
     
        
 }
 .liens a{
-    margin : 0px 25px 0px 25px
-
+    padding : 0px 25px 0px 25px ;
+    justify-content: flex-end;
+  
+  
 }
+
 
 .LienBleu{
     color: #0065FC ;
+   
  }
  .LienBleu:hover {
      border-top : 1px #0065FC solid ; 
@@ -60,9 +60,12 @@ header {
  h1 {
     font-weight: 700;
     font-size: 22px; 
+    margin-bottom: 8px;
+    margin-top: 0;
  }
 p {
-    padding: 0px 0px 15px 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .main-container {
@@ -72,15 +75,22 @@ p {
     box-sizing: border-box;
 }
 
+.BarreRecherche {
+    width: 330px;
+    height: 49px ;
+    padding-bottom: 35px;
+    padding-top: 35px;
+}
 .BarreRecherche input {
-     width : 377px;
-     height: 49px;
-    border-radius: 15px ;
+    width : 307px;
+    height: 49px;
+    border-radius:0 15px 15px 0 ;
     border: 1px #F2F2F2 solid ;
     font-weight: 700;
     font-size: 18px;
    color: black;
-   flex-wrap: wrap;
+    position: relative;
+    left : 50px
    
 }
 
@@ -104,9 +114,16 @@ p {
     left : 50% ;
     top : 50% ;
     transform:translate(-50%, -50%) ;
+    }
+    .BarreRecherche input{
+        padding-left: 24px;
+    }
+
+::placeholder {
+    color:black;
+    opacity: 1;
+    margin-left: 24px;
 }
-
-
 .cta{
     color : white ;
     font-weight: 700;
@@ -120,13 +137,13 @@ p {
     left : 250px ;
     z-index: 2;
     }
-   
-   .ContainerUn {
+.ContainerUn {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
    gap : 15px ;
-     }
+   padding-bottom: 37.5px;
+   }
 
    h2 {
         height: 21px;
@@ -136,7 +153,7 @@ p {
    .Filtre{
     border-radius: 25px;
     border: 2px #d9d9d9 solid;
-    padding :13px 19px 13px 19px  ;
+    padding :12px 19px 12px 19px  ;
     font-weight: 700;
     font-size: 17px;
     align-items: center;
@@ -145,31 +162,19 @@ p {
    .Filtre:hover {
     background-color: #DEEBFF;
    }
-   .Filtre .fa-money-bill-wave {
-    padding-right: 5px;
+   
+   .Filtre .fa-solid {
+    width: 22px;
+    height: 22px;
    }
 
-   .Filtre .fa-person {
-    padding-right: 5px;
-   }
-
-   .Filtre .fa-heart {
-    padding-right: 5px;
-   }
-
-   .Filtre .fa-fire {
-    padding-right: 5px;
-   }
+  
    .fa-info {
     border: #F2F2F2 1px solid;
     border-radius: 90px ;
     padding : 3px 8px 3px 8px;
    }
    
-
-
-
-
 
 a {
     color: inherit;
@@ -249,11 +254,12 @@ a {
     box-sizing: border-box;
 }
 .hebergement-cards img{
-    width: 100%;
+    width: 97.5%;
     height: 114px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     align-items: center;
+    border : 5px solid white ;
 }
 .hebergement-cards .card-content {
     width: 240px;
@@ -300,6 +306,7 @@ a {
     height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    border : 5px solid white ;
 }
 
 .populaires-cards .card-content {
@@ -425,6 +432,40 @@ footer .container-footer {
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .Filtre{
+        height: 33px;
+        padding: 12px 10px 1px 19px;
+    }
+    .ContainerUn{
+        display: grid;
+        grid-template-columns: 167px 131px 164px 161px;
+        grid-template-rows: 50px 50px ;
+  
+      }
+     .G{
+        height: 33px;
+     }
+      .Titre {
+       grid-column: 1/5; 
+       grid-row: 1/2;
+     }
+     .Filtre .FiltreEconomie{
+      grid-column: 1/2; 
+      grid-row: 2/3;
+     }
+     .Filtre .FiltreFamilial{
+      grid-column: 2/3; 
+      grid-row: 2/3;
+     }
+     .Filtre .FiltreRomantique{
+      grid-column: 3/4; 
+      grid-row: 2/3;
+     }
+     .Filtre .FiltreRomantique{
+      grid-column: 4/5; 
+      grid-row: 2/3;
+     }
+  
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -496,26 +537,67 @@ footer .container-footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    .main-container{
-        padding  : 0px 0px 0px 0px
+  body {
+    padding: 0;
+    margin: 0;
         }
+    .main-container {
+        margin: 0;
+        padding: 0;
+    }
     .logoSite {
-            padding : 30px 157px  30px  157px;
+            padding : 30px 156px  30px  156px;
         }
     .liens {
         display: flex;
         font-size: 16px;
         
     }
+    header {
+        height: 75px;
+        padding-bottom: 30px;
+    }
        
-    .LienBleu{
-        border-bottom: 1px #0065FC solid ;
-
-
+  
+    .GroupeInfos{
+        padding : 0px 20px 0px 20px ;
+    }
+    .Filtre{
+        height: 33px;
+        padding: 12px 10px 1px 19px;
     }
     .ContainerUn{
-        width: 100%;
+      display: grid;
+      grid-template-columns: 162.5px 162.5px ;
+      grid-template-rows: 50px 50px 50px;
+      gap : 10px ;
     }
+   .G{
+      height: 33px;
+   }
+    .Titre {
+     grid-column: 1/3; 
+     grid-row: 1/2;
+   }
+   .Filtre .FiltreEconomie{
+    grid-column: 1/2; 
+    grid-row: 2/3;
+   }
+   .Filtre .FiltreFamilial{
+    grid-column: 2/3; 
+    grid-row: 2/3;
+   }
+   .Filtre .FiltreRomantique{
+    grid-column: 1/2; 
+    grid-row: 3/4;
+   }
+   .Filtre .FiltreRomantique{
+    grid-column: 2/3; 
+    grid-row: 3/4;
+   }
+
+
+   
    .Loupe .fa-solid{
         color : white ;
         background-color: #0065FC;
@@ -524,30 +606,32 @@ footer .container-footer {
         padding: 15px 17px 15px 17px;
         position: relative;
         bottom : 103px;
-        left : 289px ;
+        left : 284px ;
         z-index: 2;
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1))
     }
     .BarreRecherche input {
-        width : 335px;
-        height: 49px;
-        border-radius: 15px ;
-        border: 1px #F2F2F2 solid ;
-        font-weight: 700;
-        font-size: 18px;
-        color: black;
-        flex-wrap: wrap;
+        width : 260px;
+       
     }
    .hebergements-and-populaires {
         flex-direction:column-reverse ;
         gap : 15px;
     }
+    
     .hebergements-and-populaires .hebergements{
         background-color: white
     }
-    .card {
+    .hebergements-and-populaires section {
+        border-radius: 0px;
+        padding: 20px;
+
+    }
+    .populaires-cards .card {
         margin-top: 15px;
     }
+   
+  
    .populaires{
         padding: 30px 20px 30px 20px ;
         gap : 15px;
@@ -555,6 +639,7 @@ footer .container-footer {
    .hebergements {
         padding: 20px;
         gap : 15px ;
+        margin-top: 0px;
     }
    .populaires-cards {
        display: flex;
@@ -562,14 +647,21 @@ footer .container-footer {
        flex-wrap: wrap;
        justify-content: space-between;
     }
+    
    .populaires-cards a {
        width: 100%;
     }
+    
     .hebergement-cards {
        display: flex;
        flex-direction: column;
        flex-wrap: wrap;
        justify-content: space-between;
+       gap : 15px ;
+       padding-top: 15px;
+    }
+    .hebergement-cards .card {
+        margin: 0px ;
     }
    .hebergement-cards a {
        width: 100%;
@@ -594,13 +686,35 @@ footer .container-footer {
         width: 100%;
         height: 36px;
         margin-bottom: 44px;
-        justify-content: space-around;
+        border-bottom: #F2F2F2 2px solid ;
+       
     }
+    .LienBleu{
+        width: 90%;
+        margin-left:  0px;
+        padding-left: 25px;
+
+    }
+    .LienBleu:hover {
+        border-top: none;
+        padding-top: 0;
+      border-bottom: #0065FC 2px solid;
+    }
+    .LienGris{
+        width: 70%;
+        margin-left: 20px;
+    }
+    
     .container-footer .row {
         margin-top: 450px;
         flex-direction: column;
+        width: 100%;
         
+       
     }  
+    .footer-col {
+        width : 80%
+    }
     /* ... */
 }
 
