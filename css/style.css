@@ -767,9 +767,12 @@ footer ul {
         margin-bottom: 44px;
         border-bottom: #F2F2F2 2px solid ;
     }
+    .liens a {
+        padding-left: 35px;
+    }
 
     .LienBleu{
-        width: 90%;
+        width: 80%;
         margin-left:  0px;
         padding-left: 25px;
 
@@ -783,7 +786,7 @@ footer ul {
 
     .LienGris{
         width: 70%;
-        margin-left: 20px;
+        margin-left: 50px;
     }
     
     .container-footer .row {
