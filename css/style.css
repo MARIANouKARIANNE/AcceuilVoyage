@@ -682,7 +682,7 @@ footer ul {
     padding: 12px 32px 1px 25px;
   }
   .filtre {
-    padding: 0 500px 0 0;
+    padding: 0 300px 0 0;
     margin: auto;
   }
   .ContainerUn {
@@ -780,6 +780,9 @@ footer ul {
   .hebergement-cards a {
     width: 100%;
     gap: 15px;
+  }
+  .Activités h2{
+    padding-left: 20px;
   }
 
   .Activités-cards {
