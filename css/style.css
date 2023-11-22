@@ -166,6 +166,11 @@ h2 {
   width: 22px;
   height: 22px;
 }
+.filtres{
+  display: flex;
+  gap :15px;
+  flex-wrap: wrap;
+}
 
 .fa-info {
   border: #f2f2f2 1px solid;
@@ -442,43 +447,14 @@ footer ul {
 @media (max-width: 1024px) {
   .Filtre {
     height: 33px;
-    padding: 12px 10px 1px 19px;
-  }
-
-  .ContainerUn {
-    display: grid;
-    grid-template-columns: 167px 131px 164px 161px;
-    grid-template-rows: 50px 50px;
+    padding: 12px 19px 1px 19px;
   }
 
   .G {
     height: 33px;
   }
 
-  .Titre {
-    grid-column: 1/5;
-    grid-row: 1/2;
-  }
-
-  .Filtre .FiltreEconomie {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-
-  .Filtre .FiltreFamilial {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-
-  .Filtre .FiltreRomantique {
-    grid-column: 3/4;
-    grid-row: 2/3;
-  }
-
-  .Filtre .FiltreRomantique {
-    grid-column: 4/5;
-    grid-row: 2/3;
-  }
+ 
 
   .infos {
     margin-bottom: 0;
@@ -679,7 +655,7 @@ footer ul {
     padding: 12px 15px 1px 19px;
   }
   .FiltreFamilial {
-    padding: 12px 32px 1px 25px;
+    padding: 12px 42px 1px 25px;
   }
   .filtre {
     padding: 0 330px 0 0;
