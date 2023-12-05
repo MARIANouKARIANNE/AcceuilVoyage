@@ -145,8 +145,10 @@ h2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 15px;
   padding-bottom: 37.5px;
+}
+G.Titre {
+  width: 4%;
 }
 
 .Filtre {
@@ -166,9 +168,9 @@ h2 {
   width: 22px;
   height: 22px;
 }
-.filtres{
+.filtres {
   display: flex;
-  gap :15px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
@@ -244,14 +246,16 @@ a {
   align-items: center;
   font-weight: 700;
   padding-top: 30px;
+  font-size: 18px;
 }
 
 .hebergement-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 30px;
-  align-items: center;
+  justify-content: space-between;
+}
+.hebergement-cards a {
+  width: 30%;
 }
 
 .hebergement-cards .card {
@@ -264,7 +268,6 @@ a {
 }
 
 .hebergement-cards img {
-  width: 95.5%;
   height: 114px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -273,14 +276,34 @@ a {
 }
 
 .hebergement-cards .card-content {
-  width: 240px;
+  width: 100%;
   height: 64px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 5px 0px 10px;
   gap: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+}
+.hebergement-cards .card-contentAuberge {
+  width: 100%;
+  height: 64px;
+  padding: 0px 5px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.hebergement-cards .card-contentAuberge .card-title {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-size: 15px;
+}
+.hebergement-cards .card-contentAuberge .card-subtitle {
+  font-size: 15px;
+}
+.hebergement-cards .card-contentAuberge .card-rating {
+  margin-bottom: 1px;
 }
 
 .hebergement-cards .card-title {
@@ -348,6 +371,7 @@ a {
   height: 559px;
   padding-top: 30px;
   gap: 30px;
+  padding-left: 30px;
 }
 
 .Activités-cards {
@@ -364,6 +388,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  padding-left: 30px;
 }
 
 .Activités .card-content {
@@ -445,16 +470,26 @@ footer ul {
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+  .G.Titre {
+    width: 90%;
+    margin-bottom: 20px;
+  }
   .Filtre {
     height: 33px;
     padding: 12px 19px 1px 19px;
+    font-size: 16px;
+  }
+  .filtres {
+    width: 100%;
+    gap: 7px;
+  }
+  .ContainerUn {
+    width: 100%;
   }
 
   .G {
     height: 33px;
   }
-
- 
 
   .infos {
     margin-bottom: 0;
@@ -652,48 +687,29 @@ footer ul {
 
   .Filtre {
     height: 33px;
-    padding: 12px 15px 1px 19px;
+    padding: 13px 15px 1px 19px;
+    width: 120px;
+    font-size: 15px;
   }
-  .FiltreFamilial {
-    padding: 12px 42px 1px 25px;
-  }
+
   .filtre {
-    padding: 0 330px 0 0;
     margin: auto;
+  }
+  .filtres {
+    width: 60%;
   }
   .ContainerUn {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    width: 100%;
   }
 
   .G {
     height: 33px;
   }
-
-  .Titre {
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-
-  .Filtre .FiltreEconomie {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-
-  .Filtre .FiltreFamilial {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-
-  .Filtre .FiltreRomantique {
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-
-  .Filtre .FiltreRomantique {
-    grid-column: 2/3;
-    grid-row: 3/4;
+  .G.Titre {
+    margin-bottom: 5px;
   }
 
   .BarreRecherche input {
@@ -817,6 +833,15 @@ footer ul {
   form {
     position: relative;
     right: 0;
+  }
+  .AfficherPlus {
+    padding-left: 5px;
+  }
+  img.Cathedrale {
+    background-size: cover;
+    background-position: center;
+
+
   }
 
   /* ... */
