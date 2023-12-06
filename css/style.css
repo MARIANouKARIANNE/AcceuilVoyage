@@ -687,22 +687,24 @@ footer ul {
 
   .Filtre {
     height: 33px;
-    padding: 13px 15px 1px 19px;
-    width: 120px;
+    padding: 13px 1px 1px 1px;
+    width: 45%;
     font-size: 15px;
+    text-align: center;
   }
 
   .filtre {
     margin: auto;
   }
   .filtres {
-    width: 60%;
+    width: 100%;
   }
   .ContainerUn {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     width: 100%;
+    
   }
 
   .G {
